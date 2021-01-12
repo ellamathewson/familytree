@@ -40,18 +40,18 @@
     <content id="gallery">
         <script>
         var folder = "Images";
-
-                $.ajax({
-                    url : folder,
-                    success: function (data) {
-                        $(data).find("a").attr("href", function (i, val) {
-                            if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-                                $("body").append( "<img class='galleryImg' src='" + val +"'>" );
-                            } 
-                        });
-                    }
-                });</script>
-
+            $.ajax({
+                url : folder,
+                success: function (data) {
+                    $(data).find("a").attr("href", function (i, val) {
+                        if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+                            $("body").append( "<img class='galleryImg' src='" + val +"'>" );
+                        } 
+                    });
+                }
+            });
+        </script>
+    </content>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
