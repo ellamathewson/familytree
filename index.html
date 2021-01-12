@@ -15,7 +15,7 @@
   </head>
   <body>
       <header>
-        <h1>Wissel Lost Photos</h1>
+        <h1>Wissel Photos</h1>
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="https://treeSprout.com" target="_blank">Treesprout.com</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +23,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                <li class="nav-item active">
+                <li class="nav-item activeLink">
                     <a class="nav-link" href="index.html">Slideshow <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
@@ -59,56 +59,19 @@
                     success: function (data) {
                         $(data).find("a").attr("href", function (i, val) {
                             if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-                                //imageArray.push(val);
-
-                                // let currentImage = document.createElement("img");
-                                // currentImage.src = val;
-                                
-                                //creates carousel items
-                                //$(".carousel-inner").append( "<div class='carousel-item'>").append( "<img class='galleryImg' src='" + val +"'>");
-
+                                //unsure why but 3 is the magic number here
                                 if(i == 3) {
-                                    $( "<div class='carousel-item active'>").appendTo(".carousel-inner").append( "<img class='d-block w-100' src='" + val +"'>");
-
+                                    //starts off the slideshow
+                                    $( "<div class='carousel-item active'>").appendTo(".carousel-inner").append( "<img class='d-block w-100' src='" + val +"'>", " <div class='carousel-caption d-none d-md-block'><p class='carouselP'>blah blah</p></div>");
                                 }
                                 else {
-                                    $( "<div class='carousel-item'>").appendTo(".carousel-inner").append( "<img class='d-block w-100' src='" + val +"'>");
+                                    //continues with nonactive slides
+                                    $( "<div class='carousel-item'>").appendTo(".carousel-inner").append( "<img class='d-block w-100' src='" + val +"'>", " <div class='carousel-caption d-none d-md-block'><p class='carouselP'>blah blah</p></div>" );
                                 }
-
-                                
-                                    //appends to every carousel-item
-                                    //$(".carousel-inner .carousel-item").append( "<img class='galleryImg' src='" + val +"'>");
-                                
-                                //imageArray.push(document.getElementsByClassName('carousel-item'));
-                                console.log(i, val);
-
-                                // for(let j = 0; j < imageArray.length; j++) {
-                                //     console.log(imageArray);
-
-                                //     imageArray[j][0].append( "<img class='galleryImg' src='" + val +"'>");
-                                // }
-                                // document.getElementsByClassName('carousel-item')[i].appendChild(currentImage);
-
-                               //$(".carousel-item").append( "<div class='carousel-item'>" );
-
                             } 
                         });
                     }
                 });
-
-            // for(let i = 0; i < imageArray.length; i++) {
-            //     console.log("in arrya");
-            //     let currentImage = document.createElement("img");
-            //     let currentImageDiv = document.createElement("div");
-            //     currentImageDiv.className = "carousel-item";
-            //     currentImage.src = i;
-            //     document.getElementsByClassName('carousel-inner').appendChild(currentImageDiv);
-            //     document.getElementsByClassName('carousel-item').appendChild(currentImage);
-
-            //     console.log("div " + currentImageDiv);
-                
-            // }
-            
         </script>
 
         <!-- 

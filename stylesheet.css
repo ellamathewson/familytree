@@ -26,7 +26,7 @@ h1 {
     border-bottom: 3px solid #9eb5a8;
 }
 
-.active {
+.activeLink {
     border-bottom: 3px solid #9eb5a8;
 } 
 
@@ -48,6 +48,15 @@ content {
 
 .carousel-item {
     float: center;
+}
+
+.d-block {
+    height: auto;
+    width: auto !important;
+    max-height: 80vh;
+
+    display: block;
+    margin: auto;
 }
 
 #gallery {
