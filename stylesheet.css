@@ -2,7 +2,6 @@
 
 header {
     margin: 2rem;
-    font-family: 'Fondamento', 'Helvetica';
 }
 
 nav {
@@ -11,6 +10,7 @@ nav {
 
 h1 {
     color: #51695B;
+    font-family: 'Fondamento', 'Helvetica';
 }
 
 .nav-link {
@@ -43,7 +43,7 @@ content {
 
 .carousel-control-next, .carousel-control-prev {
     background: black !important;
-    width: 10%;
+    width: 8%;
 }
 
 .carousel-item {
@@ -57,4 +57,15 @@ content {
 
 .galleryImg {
     width: 30%;
+}
+
+.carousel-caption {
+    background: gray;
+    opacity: .75;
+    padding: 5px;
+}
+
+.carouselP {
+    color: black;
+    opacity: 1;
 }
