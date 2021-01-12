@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Fondamento&display=swap');
+
+header {
+    margin: 2rem;
+    font-family: 'Fondamento', 'Helvetica';
+}
+
+nav {
+    font-size: 25px;
+}
+
+h1 {
+    color: #51695B;
+}
+
+.nav-link {
+    color: black !important;
+}
+
+.nav-item {
+    margin: 0 1em;
+    padding: 5px;
+}
+
+ .nav-item:hover {
+    border-bottom: 3px solid #9eb5a8;
+}
+
+.active {
+    border-bottom: 3px solid #9eb5a8;
+} 
+
+content {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 2rem 10%;
+}
+
+#carouselExampleControls {
+    width: 80%;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    background: black !important;
+    width: 10%;
+}
+
+.carousel-item {
+    float: center;
+}
+
+#gallery {
+    display: flex;
+    flex-direction: row;
+}
+
+.galleryImg {
+    width: 30%;
+}
