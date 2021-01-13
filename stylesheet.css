@@ -2,10 +2,14 @@
 
 header {
     margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 h1 {
@@ -33,17 +37,19 @@ h1 {
 content {
     display: flex;
     justify-content: center;
-    width: 80%;
-    margin: 2rem 10%;
+    width: 95vw;
+    margin: 2rem 2.5vw;
 }
 
 #carouselExampleControls {
-    width: 80%;
+    width: 95vw;
+    margin: 0 2.5vw;
 }
 
 .carousel-control-next, .carousel-control-prev {
-    background: black !important;
-    width: 8%;
+    background: #51695B !important;
+    width: 3%;
+    border-radius: 5px;
 }
 
 .carousel-item {
@@ -74,7 +80,10 @@ content {
     padding: 5px;
 }
 
-.carouselP {
+.carousel-caption {
     color: black;
     opacity: 1;
+    width: 50%;
+    margin: 0 25%;
+    position: initial;
 }
