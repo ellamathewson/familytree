@@ -68,16 +68,25 @@ content {
 #gallery {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .galleryImg {
     width: 30%;
+    height: 30%;
+}
+
+img.galleryImg.totalGallery:hover {
+    opacity: .5;
+    cursor: pointer;
 }
 
 .carousel-caption {
-    background: gray;
+    background: #9eb5a8;
     opacity: .75;
     padding: 5px;
+    border-radius: 5px;
 }
 
 .carousel-caption {

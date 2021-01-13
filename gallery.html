@@ -17,7 +17,7 @@
       <header>
         <h1>Wissel Photos</h1>
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="https://treeSprout.com" target="_blank">Treesprout.com</a>
+            <!-- <a class="navbar-brand" href="https://treeSprout.com" target="_blank">Treesprout.com</a> -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -45,11 +45,25 @@
                 success: function (data) {
                     $(data).find("a").attr("href", function (i, val) {
                         if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-                            $("body").append( "<img class='galleryImg' src='" + val +"'>" );
+                            $("#gallery").append("<img class='galleryImg totalGallery' src='" 
+                                + val +"'>");
                         } 
                     });
                 }
             });
+        </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                //the event occurred
+                console.log($('img'));
+                $('img').on('click', function(e) {
+                    console.log("clicked")
+                    $('#imgViewer').html('').append( $(e.currentTarget).clone().removeClass('img-responsive').removeClass('img-thumbnail') )
+                    $('#viewImg').modal('show')
+                });
+            })
+            
         </script>
     </content>
 

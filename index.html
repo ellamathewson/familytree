@@ -62,10 +62,10 @@
                             if( val.match(/\.(jpe?g|png|gif)$/) ) { 
                                 //unsure why but 3 is the magic number here
                                 let addSpace = val.replace(/_/g, ' ');
-                                let removePercent = addSpace.replace(/%20/g, ', ');
+                                let removePercent = addSpace.replace(/%20/g, ' ');
                                 let formatPeriod = removePercent.replace('.', '. ');
                                 let imgCaption = formatPeriod.replace('/Images/', '');
-                                let imgCaptionFinal = imgCaption.replace(/jpg/g, '');
+                                let imgCaptionFinal = imgCaption.replace(/.jpg/g, '');
 
                                 if(i == 3) {
                                     //starts off the slideshow
