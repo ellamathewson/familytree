@@ -45,8 +45,20 @@
                 success: function (data) {
                     $(data).find("a").attr("href", function (i, val) {
                         if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-                            $("#gallery").append("<img class='galleryImg totalGallery' src='" 
-                                + val +"'>");
+                            //unsure why but 3 is the magic number here
+                            let addSpace = val.replace(/_/g, ' ');
+                            let removePercent = addSpace.replace(/%20/g, ' ');
+                            let formatPeriod = removePercent.replace('.', '. ');
+                            let imgCaption = formatPeriod.replace('/Images/', '');
+                            let imgCaptionFinal = imgCaption.replace(/.jpg/g, '');
+
+                            console.log(val);
+                        
+                            $("<figure class='figure'>").appendTo("#gallery").append(
+                                "<img class='galleryImg totalGallery' src='" 
+                                + val +"'>",
+                                "<figcaption class='figure-caption'>" + imgCaptionFinal 
+                                + "</figcaption></figure>");
                         } 
                     });
                 }

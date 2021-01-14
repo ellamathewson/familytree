@@ -70,11 +70,20 @@ content {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    width: 90%;
+    margin: 2% 5%;
+    justify-content: center;
+}
+
+.figure {
+    display: block;
+    width: 50%;
+    padding: 0 10%;
 }
 
 .galleryImg {
-    width: 30%;
-    height: 30%;
+    width: 90%;
+    height: 90%;
 }
 
 img.galleryImg.totalGallery:hover {
