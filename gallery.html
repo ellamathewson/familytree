@@ -30,7 +30,7 @@
                     <a class="nav-link" href="gallery.html">All Photos <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="http://treesprout.com/">Contact</a>
                 </li>
                 </ul>
             </div>
@@ -38,6 +38,7 @@
       </header>
 
     <content id="gallery">
+        <h5>Click on any image to contact Mary Mathewson about.</h5>
         <script>
         var folder = "Images";
             $.ajax({
@@ -55,7 +56,7 @@
                             console.log(val);
                         
                             $("<figure class='figure'>").appendTo("#gallery").append(
-                                "<img class='galleryImg totalGallery' src='" 
+                                "<img class='galleryImg' onclick='SendEmail(this.src)' src='" 
                                 + val +"'>",
                                 "<figcaption class='figure-caption'>" + imgCaptionFinal 
                                 + "</figcaption></figure>");
@@ -63,6 +64,15 @@
                     });
                 }
             });
+
+            function SendEmail(photoSource) {
+                let email = 'mary@treesprout.com';
+                let subject = 'Wissel Photo Comment';
+                let emailBody = '';
+                let attach = photoSource;
+                document.location = "mailto:"+email+"?subject="+subject+"&body="+emailBody+
+                "?attach="+attach;
+            }
         </script>
 
         <script>

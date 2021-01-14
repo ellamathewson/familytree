@@ -17,6 +17,11 @@ h1 {
     font-family: 'Fondamento', 'Helvetica';
 }
 
+h5 {
+    margin-bottom: 3em;
+    color: #51695B;
+}
+
 .nav-link {
     color: black !important;
 }
@@ -86,7 +91,7 @@ content {
     height: 90%;
 }
 
-img.galleryImg.totalGallery:hover {
+img.galleryImg:hover {
     opacity: .5;
     cursor: pointer;
 }
