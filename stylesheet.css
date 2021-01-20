@@ -96,6 +96,11 @@ img.galleryImg:hover {
     cursor: pointer;
 }
 
+h5 {
+    width: 100%;
+    text-align: center;
+}
+
 .carousel-caption {
     background: #9eb5a8;
     opacity: .75;
